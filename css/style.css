@@ -308,6 +308,7 @@ aside h2 {
   transition: all 0.3s ease;
   font-size: 1.4rem;
   letter-spacing: 0.5px;
+  margin-top: 2rem;
 }
 
 .btn-vaciar-carrito:hover {
