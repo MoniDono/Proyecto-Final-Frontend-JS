@@ -32,7 +32,7 @@ LocalStorage
 
 JSON
 
-SweetAlert2 si lo usaste en alertas
+SweetAlert2
 
 
 
