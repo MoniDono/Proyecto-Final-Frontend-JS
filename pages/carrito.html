@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
     <title>Carrito</title>
     <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/ad5c5df7d9.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/ad5c5df7d9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-  <div class="grid-container">
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <a href="../index.html" class="header_logo">
+          <img src="../img/logo.png" alt="Logo" />
+        </a>
 
-    <header class="header">
-      <a href="../index.html" class="header_logo">
-          <img src="../img/logo.png" alt="Logo">
-      </a>
+        <nav class="header_nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li>
+              <a href="./carrito.html" class="carrito-icono">
+                🛒 <span id="contador-carrito">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <nav class="header_nav">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li>
-            <a href="./carrito.html" class="carrito-icono">
-              🛒 <span id="contador-carrito">0</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
+      <main class="carrito-main">
         <h1 class="titulo-home">Carrito de Compras</h1>
 
-        <!-- Productos -->
-        <section id="contenedor-carrito"></section>
+        <div class="carrito-layout">
+          <div class="carrito-contenido">
+            <section id="contenedor-carrito"></section>
+          </div>
 
-        <!-- Acciones del carrito -->
-        <div id="acciones-carrito"></div>
+          <div id="resumen-carrito" class="resumen-carrito-card">
+            <!-- El contenido se genera desde carrito.js -->
+          </div>
+        </div>
+      </main>
 
-        <!-- Resumen de compra (si lo querés usar después) -->
-        <div id="resumen-carrito"></div>
-    </main>
+      <footer class="footer">
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+        <nav>
+          <ul>
+            <li>Seguinos en:</li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-x"></i></li>
+          </ul>
+        </nav>
+      </footer>
 
-    <footer class="footer">
-      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-      <nav>
-        <ul>
-          <li>Seguinos en:</li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-x"></i></li>
-        </ul>
-      </nav>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="../js/carrito.js"></script>
-
-  </div>
-</body>
-</html
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script type="module" src="../js/carrito.js"></script>
+    </div>
+  </body>
+</html>

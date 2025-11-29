@@ -31,6 +31,7 @@ body {
   gap: 10px;
   padding: 10px;
 }
+
 /* HEADER */
 .header {
   grid-area: header;
@@ -144,8 +145,8 @@ main h1 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra elegante */
-  transition: transform 0.3s ease; /* animación */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
 .tarjeta-producto img {
@@ -185,10 +186,12 @@ main h1 {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  transition: all 0.3s ease; /* <- más suave */
+  transition: all 0.3s ease;
 }
 
-/* ASIDE */
+/*----------------------------------------------------*/
+/* -------------------ASIDE-------------------------- */
+/*----------------------------------------------------*/
 aside {
   grid-area: aside;
   background: rgba(174, 199, 240, 0.7);
@@ -218,6 +221,7 @@ aside h2 {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
+
 .tarjeta-aside img {
   width: 100%;
   border-radius: 0.5rem;
@@ -247,12 +251,18 @@ aside h2 {
   background-color: rgb(34, 78, 143);
 }
 
-/* Botón del carrito */
+/*----------------------------------------------------*/
+/*                  👌NUEVO CARRITO                    */
+/*----------------------------------------------------*/
+
 .btn-carrito {
   background: linear-gradient(135deg, #3760aa, #1e3f73);
   color: white;
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(30, 63, 115, 0.4);
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.5rem;
 }
 
 .btn-carrito:hover {
@@ -265,13 +275,12 @@ aside h2 {
   transform: scale(0.95);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-/*----------------------------------------------------*/
-/*                   👌NUEVO CARRITO                     */
-/*----------------------------------------------------*/
+
 .mensaje-carrito-vacio {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  width: 100%;
 }
 
 .btn-eliminar-carrito {
@@ -322,6 +331,93 @@ aside h2 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
+/* Lista y total del resumen */
+
+.lista-resumen-carrito {
+  list-style: none;
+  margin-top: 2rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+.lista-resumen-carrito li {
+  margin-bottom: 0.5rem;
+}
+
+.total-carrito {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*----------------------------------------------------*/
+/*            LAYOUT PÁGINA CARRITO (2 COLUMNAS)      */
+/*----------------------------------------------------*/
+
+.carrito-main {
+  width: 95%;
+  margin: 2rem auto;
+}
+
+.carrito-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* productos | resumen */
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Columna izquierda: productos del carrito */
+.carrito-contenido {
+  width: 100%;
+}
+
+.carrito-contenido #contenedor-carrito {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 🔹 2 columnas */
+  justify-items: center;
+  gap: 3rem; /* separación entre tarjetas */
+}
+
+/* Opcional: pequeño ajuste sólo para las tarjetas dentro del carrito */
+.carrito-contenido .tarjeta-producto {
+  width: 25rem; /* mismo ancho que en el home */
+}
+
+/* Columna derecha: tarjeta resumen */
+.resumen-carrito-card {
+  background: #eebdd2;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resumen-carrito-card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 900px) {
+  .carrito-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .carrito-contenido #contenedor-carrito {
+    grid-template-columns: 1fr; /* una columna en celu */
+  }
+
+  .resumen-carrito-card {
+    max-width: 100%;
+  }
+}
+
 /*----------------------------------------------------*/
 /*                         FOOTER                     */
 /*----------------------------------------------------*/
@@ -356,6 +452,7 @@ aside h2 {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 /*---------------------------------------------------*/
 /*                      ICONOS                       */
 /*---------------------------------------------------*/
@@ -388,6 +485,7 @@ nav ul {
   text-align: center;
   margin: 1rem 0;
 }
+
 .parrafo-contacto {
   text-align: center;
   font-size: 1.6rem;
@@ -395,6 +493,7 @@ nav ul {
   margin: 0 auto 2rem auto;
   line-height: 1.5;
 }
+
 .contacto-page .contacto-container {
   display: flex;
   flex-direction: column;
@@ -452,9 +551,10 @@ textarea {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
 /*-----------------------------------------------------*/
-/*                  MEDIA QUERIES
-/* Para pantallas de hasta 768px (tablets y celulares) */
+/*                  MEDIA QUERIES                     */
+/*   Para pantallas de hasta 768px (tablets/celus)    */
 /*-----------------------------------------------------*/
 @media (max-width: 768px) {
   .grid-container {
@@ -523,7 +623,7 @@ textarea {
   }
 
   .contenedor-tarjetas {
-    flex-direction: column; /* Productos en columna */
+    flex-direction: column;
     align-items: center;
   }
 
@@ -533,14 +633,23 @@ textarea {
   }
 
   .footer {
-    flex-direction: column; /* apila los elementos */
+    flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
 
   .footer nav ul {
-    flex-direction: row; /* menú en columna */
+    flex-direction: row;
     gap: 1.5rem;
+  }
+
+  /* Carrito: columnas apiladas en móvil */
+  .carrito-layout {
+    flex-direction: column;
+  }
+
+  .resumen-carrito-card {
+    max-width: 100%;
   }
 }
 

@@ -2,19 +2,19 @@
   {
     "id": "p1",
     "nombre": "Promo 1",
-    "precio": "$25.000",
+    "precio": "25000",
     "img": "img/bb vaquita.jpg"
   },
   {
     "id": "p2",
     "nombre": "Promo 2",
-    "precio": "$28.000",
+    "precio": "28000",
     "img": "img/bb dino.jpg"
   },
   {
     "id": "p3",
     "nombre": "Promo 3",
-    "precio": "$24.000",
+    "precio": "24000",
     "img": "img/bb conejo.jpg"
   }
 ]

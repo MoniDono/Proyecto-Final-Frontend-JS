@@ -1,8 +1,30 @@
 [
-    {"id": "1", "nombre": "Disfraz Abeja", "descripcion": "Un tierno disfraz de abeja para visitar a los abuelos", "precio": "$ 30.000", "img": "img/disfraz-abeja-bebe.jpg" },
-    {"id": "2", "nombre": "Disfraz Ranita", "descripcion": "Un divertido disfraz de ranita para saltar sin parar", "precio": "$ 30.000", "img": "img/disfraz-ranita-bebe.jpg" },
-    {"id": "3", "nombre": "Disfraz Conejo", "descripcion": "Un cómodo disfraz de conejo para jugar con los amigos", "precio": "$ 30.000", "img": "img/disfraz-conejo-bebe.jpg" },
-    {"id": "4", "nombre": "Disfraz Oveja", "descripcion": "Un abrigado disfraz de oveja para disfrutar de un día de invierno", "precio": "$ 30.000", "img": "img/disfraz-oveja-bebe.jpg" }
-
-
+  {
+    "id": "1",
+    "nombre": "Disfraz Abeja",
+    "descripcion": "Un tierno disfraz de abeja para visitar a los abuelos",
+    "precio": " 30000",
+    "img": "img/disfraz-abeja-bebe.jpg"
+  },
+  {
+    "id": "2",
+    "nombre": "Disfraz Ranita",
+    "descripcion": "Un divertido disfraz de ranita para saltar sin parar",
+    "precio": "30000",
+    "img": "img/disfraz-ranita-bebe.jpg"
+  },
+  {
+    "id": "3",
+    "nombre": "Disfraz Conejo",
+    "descripcion": "Un cómodo disfraz de conejo para jugar con los amigos",
+    "precio": "30000",
+    "img": "img/disfraz-conejo-bebe.jpg"
+  },
+  {
+    "id": "4",
+    "nombre": "Disfraz Oveja",
+    "descripcion": "Un abrigado disfraz de oveja para disfrutar de un día de invierno",
+    "precio": "30000",
+    "img": "img/disfraz-oveja-bebe.jpg"
+  }
 ]

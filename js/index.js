@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         descripcion.textContent = producto.descripcion;
 
         const precio = document.createElement("p");
-        precio.textContent = `${producto.precio}`;
+        precio.textContent = `$${producto.precio}`;
 
         const boton = document.createElement("button");
         boton.classList.add("btn-carrito");
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         img.alt = promo.nombre;
 
         const precio = document.createElement("p");
-        precio.textContent = promo.precio;
+        precio.textContent = `$${promo.precio}`;
 
         const boton = document.createElement("button");
         boton.classList.add("btn-carrito");
@@ -113,7 +113,5 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((err) => {
       console.log("Error cargando promos:", err);
-      // opcional:
-      // mostrarMensaje("Error al cargar promos", "error");
     });
 });
