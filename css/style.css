@@ -338,6 +338,7 @@ aside h2 {
   margin-top: 2rem;
   padding: 2rem;
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .lista-resumen-carrito li {
@@ -362,7 +363,7 @@ aside h2 {
 
 .carrito-layout {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* productos | resumen */
+  grid-template-columns: 2fr 1fr;
   align-items: flex-start;
   gap: 3rem;
   width: 100%;
@@ -375,14 +376,13 @@ aside h2 {
 
 .carrito-contenido #contenedor-carrito {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 🔹 2 columnas */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
-  gap: 3rem; /* separación entre tarjetas */
+  gap: 3rem;
 }
 
-/* Opcional: pequeño ajuste sólo para las tarjetas dentro del carrito */
 .carrito-contenido .tarjeta-producto {
-  width: 25rem; /* mismo ancho que en el home */
+  width: 25rem;
 }
 
 /* Columna derecha: tarjeta resumen */
